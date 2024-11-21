@@ -24,7 +24,7 @@ namespace tasks
     {
         public string name;
         public string[] curses;
-        public int strokes;
+        public int strokes = 0;
         public GrumpinessLevel level;
         public Ded(string name, GrumpinessLevel level, string[] curses)
         {
@@ -249,6 +249,7 @@ namespace tasks
 
             string[] testCurses = new string[] { "Чурка", "Проститутки", "Ублюдки", "Карабас" };
             for (int i = 0; i < 5; i++) { Console.WriteLine($"{deds[i].name} получил {deds[i].CountStrokes(testCurses)} синяков"); }
+            for(int i = 0; i < 5; i++) { Console.WriteLine($"{deds[i].name} получил {deds[i].CountStrokes(testCurses)} синяков"); }
 
 
 
